@@ -1,2 +1,2 @@
 # RegisterForm
-![image](https://github.com/perihanozby/RegisterForm/assets/85580340/2c5b7e02-ece3-4fd7-93cb-88221e276688)
+![image](https://github.com/perihanozby/RegisterForm/assets/85580340/b00f8a0f-c520-49ee-a06d-fb346774c6fd)
