@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 
   <title>REGISTER</title>
@@ -34,7 +36,7 @@
             display: inline-block;
             padding: 10px 20px;
             background-color: #ffffff; /* Facebook için */
-            color: #082b8d;
+            color: blue;
             text-decoration: none;
             margin-right: 10px;
             font-style:italic;
@@ -42,14 +44,14 @@
        }
   .btn.google {
             background-color: #ffffff; /* Google için */
-            color: #DB4437;
+            color: red;
             font-weight: bold;
 
 
               }
   .btn.yahoo {
             background-color: #ffffff; /* Yahoo için */
-            color: #720E9E;
+            color: purple;
             font-weight: bold;
           
              }
@@ -77,48 +79,37 @@
   .btn-primary {
     margin-top: 10px;
   }
-  #name {
+
+  #name, #confirm_password, #email, #password, #button_create{
     border-radius: 30px;
     width: 300px;
     background-color: rgba(75, 31, 31, 0.068);
-
-  }
-  #email{
-    border-radius: 30px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.068);
-
-
-  }
-  #password{
-    border-radius: 30px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.068);
-
-
-  }
-  #confirm_password{
-    border-radius: 30px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.068);
-
-
-  }
-  #button_create{
-    border-radius: 30px;
-    width: 300px;
-    background-color: rgba(178, 74, 219, 0.651);
-
-
-  }
-  @media (max-width: 768px) {
-      .container {
-        padding: 50px 20px;
-      }}
-  
-        
     
-</style>
+
+  }
+ 
+  #button_create{
+    background-color: rgba(178, 74, 219, 0.651);
+    
+
+  }
+
+  @media (max-width: 768px) {
+  /* Cep telefonu için stil kuralları buraya gelecek */
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+  @media(max-width:992px){
+    .container{
+      width: 100%;
+    padding: 10px;
+    }
+  }
+
+ 
+ </style>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
@@ -176,3 +167,6 @@
     </script>
 </body>
 </html>
+
+
+

@@ -68,3 +68,33 @@ h2{
     margin-top: 10px;
   }
   
+  #name, #confirm_password, #email, #password, #button_create{
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(75, 31, 31, 0.068);
+    
+
+  }
+ 
+  #button_create{
+    background-color: rgba(178, 74, 219, 0.651);
+    
+
+  }
+
+  @media (max-width: 768px) {
+  /* Cep telefonu için stil kuralları buraya gelecek */
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+  @media(max-width:992px){
+    .container{
+      width: 100%;
+    padding: 10px;
+    }
+  }
+
+
+  
