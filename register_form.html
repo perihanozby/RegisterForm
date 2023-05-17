@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <title>REGISTER</title>
+  <style>
+    h2{
+        text-align: center;
+        font-weight: bold;
+        font-style:normal;
+        
+    }
+
+
+    .container {
+      width: 300px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 90px;
+      box-sizing: border-box;
+      margin: auto;
+      text-align: center;
+      
+  }
+  .container registrationForm {
+  width: 300px; /* Formun genişliğini istediğiniz değerle değiştirin */
+  
+}
+
+  .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffffff; /* Facebook için */
+            color: #082b8d;
+            text-decoration: none;
+            margin-right: 10px;
+            font-style:italic;
+            box-shadow: 0 2px 4px rgba(172, 38, 154, 0.952); /* Dış çeperi belirleyen box-shadow */
+       }
+  .btn.google {
+            background-color: #ffffff; /* Google için */
+            color: #DB4437;
+            font-weight: bold;
+
+
+              }
+  .btn.yahoo {
+            background-color: #ffffff; /* Yahoo için */
+            color: #720E9E;
+            font-weight: bold;
+          
+             }
+  
+  
+  .form-control {
+    width: 300px;
+    height: 40px;
+    
+  }
+  #registrationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+
+  }
+
+  .btn-primary {
+    margin-top: 10px;
+  }
+  #name {
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(75, 31, 31, 0.068);
+
+  }
+  #email{
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.068);
+
+
+  }
+  #password{
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.068);
+
+
+  }
+  #confirm_password{
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.068);
+
+
+  }
+  #button_create{
+    border-radius: 30px;
+    width: 300px;
+    background-color: rgba(178, 74, 219, 0.651);
+
+
+  }
+  @media (max-width: 768px) {
+      .container {
+        padding: 50px 20px;
+      }}
+  
+        
+    
+</style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>REGISTER</h2>
+        <a href="https://facebook.com/oauth/authorize"> <!-- Facebook bağlantısı -->
+            <button class="btn" style="border-radius: 100px; font-weight: bold; ">f</button>
+        </a>
+        <a href="https://accounts.google.com/o/oauth2/auth"> <!-- Google bağlantısı -->
+            <button class="btn google" style="border-radius: 100px;">G</button>
+        </a>
+        <a href="https://api.login.yahoo.com/oauth2/request_auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code"> <!-- Yahoo bağlantısı -->
+            <button class="btn yahoo" style="border-radius: 100px;">Y</button>
+        </a>
+        <br>
+        <br>
+        <p>or use your email address:</p>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Name Surname">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+        <span id="password_error" style="color:red;"></span>
+      </div>
+      <button type="submit" class="btn btn-primary" id="button_create">CREATE ACCOUNT</button>
+    </form>
+    <br>
+    
+    <p>Already have an account? <a style="color: #10047c;" href="#">Sign in</a></p>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="registration.js"></script>
+  <script>
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirm_password = document.getElementById("confirm_password").value;
+      if (password != confirm_password) {
+        document.getElementById("password_error").innerHTML = "Parolalar eşleşmiyor!";
+        return false;
+      } else {
+        return true;
+      }
+    }
+    </script>
+</body>
+</html>
